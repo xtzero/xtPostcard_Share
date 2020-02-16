@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>xtPostcard | 寄一个明信片</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    
+</head>
+<body>
+<div class="bg">
+    <div class="message">
+        <a href="#" class="sendShow">我也寄一个</a>
+        <img src="img/message.png" alt="" srcset="" class="openMsg">
+        <span class="openMsg">点击开启</span>
+    </div>
+    <div id="verifycode">
+        <div class="close close-get">
+            ×
+        </div>
+        <div class="code-title">输入取件码</div>
+        <input type="text" class="code-input" id="code-input" placeholder="取件码在短信里哦">
+        <div class="code-get">取件</div>
+    </div>
+    <div class="popBg"></div>
+    <div class="postcard cnt">
+        <div class="close">
+            ×
+        </div>
+        <a href="jacascript:void(0)" class="sendShow1">我也寄一个</a>
+        <div class="content">
+            <!-- <div class="title">To:宇彤</div> -->
+            <div class="text" id="content">
+                如果你看到了这段内容，那就是什么都没有。
+            </div>
+            <div class="form" id="from">来自：异次元</div>
+        </div>
+    </div>
+    <div class="postcard send">
+        <div class="close">
+            ×
+        </div>
+        <div class="content">
+            <div class="phoneTest">
+                你的手机号是：<input type="text" minlength="11" maxlength="11" id="sendCard-mobileInput" placeholder="这里填写屏幕前的你的手机号哦">
+                <a href="javascript:void(0)" class="sendPhoneTest">发送验证码</a><br>
+                <div id="sendCard-verifyCode">
+                    验证码<input type="text" minlength="6" maxlength="6" id="sendCard-verifyCode-input" placeholder="验证码通过短信发给你啦">
+                </div>
+            </div>
+            <div class="title" id="rec" style="display: none;">
+                收件人手机号是：<input type="text" placeholder="对方会收到短信哦" id="sendTo-input"><br>
+                明信片来自：<input type="text" placeholder="就是寄信人（你）的名字啦" id="fromname-input">
+            </div>
+            <div class="text" id="sendPostcard" style="display: none;">
+                <textarea placeholder="要说点什么呢？" id="sendContent-textarea"></textarea>
+            </div>
+            <a href="javascript:void(0)" id="sendPostcard-a" class="sendButton" style="display: none;">发送</a>
+        </div>
+    </div>
+    <a id="wemade">制作人员名单</a>
+    <script src="js/main.js"></script>
+</div>
+<div class="phoneAround">
+    <img src="img/phoneAround.png" alt="" srcset="">
+    <div>请横屏观看 <br/> <div class="around-tip">请解锁屏幕锁定并旋转屏幕后横屏观看。<br/>如微信无法横屏，请点击右上角按钮，选择浏览器打开</div> </div>
+</div>
+</body>
+</html>

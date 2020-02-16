@@ -1,0 +1,101 @@
+*{ margin:0; padding:0; border:none}
+img{ width:100%;}
+a{ text-decoration: none;}
+.bg{background: url('../img/bg.png') no-repeat;min-height:1080px;background-size:100%; opacity: 0; transition: all 2s ease .5s;}
+.bg.active{ opacity: 1;}
+.message{ width:500px; position: fixed; margin-top:-197px;margin-left:-250px;left:50%; top:50%; cursor: pointer;transition: all .3s ease .5s;}
+.message:hover{width:620px;margin-left:-310px;top:48%;}
+.message span{    
+    position: absolute;
+    right: 4%;
+    bottom: 20%;
+    font-size: 16px;
+    font-weight: bold;
+    color: #f189a2;}
+#verifycode{ width:400px;height:300px; position: fixed; left:50%; top:50%; margin:-150px 0 0 -200px; display: none; background:url('../img/popbg.png') no-repeat; background-size: 100%;}
+#verifycode .code-title{color:#fff; margin-top:10%;margin-left:20%}
+#verifycode .code-input{ margin-left:20%;height:30px;border:0; border-bottom:2px solid #fff; background:none; outline: 0; color:#fff; font-size:18px;}
+#verifycode .code-get{margin-left:20%;margin-top:15px; color:#fff; border:2px solid #fff; border-radius: 5px; display: inline-block; padding:3px 8px;}
+.popBg{ background:rgba(0,0,0,.5); position: fixed; left:0; top:0; width:100%; height:100%; display: none;}
+.postcard{ position: fixed;display: none; border-radius: 10px; left:50%;width:961px;height:540px;top:50%; margin-left:-480px; margin-top:-270px; background:url('../img/contentBg.png') no-repeat; background-size: 100%;}
+.postcard .close{ position: absolute; right:20px;top:10px;width:25px; cursor: pointer;font-size: 2em;color: white;}
+#verifycode .close{ position: absolute; right:40px;top:30px;width:25px; cursor: pointer;font-size: 2em;color: white;}
+.postcard .content{width:630px;margin-left:25%;margin-top:9%; transform: rotate(7.5deg);}
+.postcard .content .title{font-size:25px; font-weight:bold}
+.postcard .content .phoneTest{font-size:18px; font-weight:bold; margin-top:10px;}
+.postcard .content .text{font-size:19px;margin-left:10%; line-height:28px;margin-top:5%}
+.postcard .content .form{font-size:22px; margin-top:20px; text-align: right;}
+.postcard .content .title input{height:25px;border:0;border-bottom:1px solid #000; background:none;outline: 0; font-size:20px;width:100px;margin:0 10px;}
+.postcard .content .phoneTest input{height:18px;border:0;border-bottom:1px solid #000; background:none;outline: 0; font-size:16px;margin:0 10px;width:100px;}
+.postcard .content .text textarea{box-sizing: border-box;width:100%;height:220px;border:1px solid #000; padding:2%;background:none}
+.postcard.send .content .text{font-size:19px;margin-left:10%; line-height:28px;margin-top:2%}
+.sendButton{    float: right;
+    color: #000;
+    display: block;
+    border: 1px solid #000;
+    padding: 3px 10px;
+    border-radius: 5px;}
+.sendPhoneTest{display: inline-block;
+    border: 1px solid #000;
+    padding: 2px 10px;
+    border-radius: 5px;
+    color:#000;
+    font-size:16px;}
+.sendShow{position: absolute;
+    right: -30px;
+    top: 60px;
+    background-color: #f189a2;
+    color: white;
+    /* font-weight: bold; */
+    font-size: 15px;
+    border: 1px solid #f189a2;
+    padding: 3px 10px;
+    border-radius: 5px;}
+.sendShow1{position: absolute;
+    left: 30px;
+    top: 60px;
+        background-color: #f189a2;
+        color: white;
+        /* font-weight: bold; */
+        font-size: 15px;
+        border: 1px solid #f189a2;
+        padding: 3px 10px;
+        border-radius: 5px;}
+    body.arround{ background:#000}
+body.normal .phoneAround{display: none;}
+body.normal .bg{display: block;}
+body.arround .phoneAround{display: block;}
+body.arround .bg{display: none;}
+body.arround .phoneAround img{ width:150px; margin:80px auto 20px; display: block;}
+body.arround .phoneAround{ color:#fff; font-size:20px; text-align: center;}
+@media (max-width:1024px){
+    .postcard{    width: 600px;height: 335px;    margin-left: -300px;margin-top: -167px;}
+    .postcard .content{    margin-left: 24%;margin-top: 11%;width:410px;}
+    .postcard .content .title{font-size:20px; }
+    .postcard .content .text{    font-size: 12px;line-height: 16px; margin-top:2%;}
+    .postcard .content .form{    font-size: 16px;
+        margin-top: 15px;}
+    .postcard.send .content .title{font-size:14px;}
+    /* 收件人和from的输入框 */
+    .postcard.send .content .title input{width:200px; font-size:14px;border-color: #f189a2;}
+    .postcard .content .phoneTest{font-size:14px;    margin-top: 5px;}
+    .sendPhoneTest{ font-size:13px;color:white;background-color: #f189a2;border-color: rgba(0,0,0,0);}
+    /* 手机号和验证码的输入框 */
+    .postcard .content .phoneTest input{ font-size:12px;width:150px;border-color: #f189a2;color: black;}
+    .postcard .content .text textarea{ height:100px;}
+    .sendButton{ color:white;background-color: #f189a2;font-size:12px;border-color: rgba(0,0,0,0);}
+    .content{color: #f189a2;}
+    .around-tip{font-size: 10px;}
+}
+
+#wemade{
+    color: #f189a2;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 10px;
+    /* color: white; */
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
